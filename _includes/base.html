@@ -1,13 +1,59 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>{{ title }} - {{ site }}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     </head>
-    <body>
-        {{ content }}
+    <body class="padding_lelf_righ_10">
+         <!-- Added site name to header/NAV -->
+    <header class="header_footer" >
+        <h1 class="text-center margin_top_bottom_10 animation_zoom">{{ site }}</h1>
+
+        <nav>
+            <ul>
+                <a class="hoover_to_purple " href="{{ '/' | url }}" >Home</a>
+                <a class="hoover_to_purple " href="{{ '/aboutUs' | url}}">About Us</a>
+            </ul>
+        </nav>
+         
+    </header>
+    
+
+
+       <main>
+            <hr>  
+            <div class="padding_all_side_40 ">
+                {{content}}
+            </div>
+           
+                       
+
+         
+        
+        <!-- Implemented Footer on the page. Added a line break for easy consumption.  -->
+        <!-- Added a NAV based Site MAP to the footer  -->
+            <hr>
+            <footer class="header_footer ">
+                <!-- Added Copyright symbol, c -->
+                <p>&copy;Copyright Team 6. All rights Reserved!</p>
+                <nav>
+                    <!-- site map at bottom of page so user has easy access to home/aboutUs  -->
+                    <h3>Site Map:</h3>
+                    <ul>
+                        <a class="hoover_to_purple" href="{{ '/' | url }}">Home </a>
+                        <a class="hoover_to_purple" href="{{ '/aboutUs' | url}}">About Us</a>
+                    </ul>
+                </nav>        
+            </footer>
+        </main>
+    </body>
+ 
     </body>
 </html>
